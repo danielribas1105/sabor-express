@@ -1,0 +1,146 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "exibir_nome_app",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def exibir_nome_app():\n    print(\"\"\"\n░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗\n██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝\n╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░\n░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗\n██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝\n╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░\n\"\"\")\ndef exibir_opcoes():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "exibir_opcoes",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def exibir_opcoes():\n    print('1. Cadastrar restaurante')\n    print('2. Listar restaurante')\n    print('3. Alternar estado restaurante')\n    print('4. Sair')\ndef opcao_invalida():\n    print('Opção inválida!')\n    voltar_menu_principal()\ndef exibir_subtitulo(texto):\n    os.system('cls')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "opcao_invalida",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def opcao_invalida():\n    print('Opção inválida!')\n    voltar_menu_principal()\ndef exibir_subtitulo(texto):\n    os.system('cls')\n    linha = '*' * len(texto)\n    print(linha)\n    print(texto)\n    print(linha)\ndef cadastrar_novo_restaurante():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "exibir_subtitulo",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def exibir_subtitulo(texto):\n    os.system('cls')\n    linha = '*' * len(texto)\n    print(linha)\n    print(texto)\n    print(linha)\ndef cadastrar_novo_restaurante():\n    '''Função para realizar o cadastro de novos restaurantes\n    Inputs:\n    - Nome do restaurante",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "cadastrar_novo_restaurante",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def cadastrar_novo_restaurante():\n    '''Função para realizar o cadastro de novos restaurantes\n    Inputs:\n    - Nome do restaurante\n    - Categoria do restaurante\n    Output:\n    - Acrescenta um restaurante a lista de restaurantes\n    '''\n    exibir_subtitulo('Cadastro de novo restaurante\\n')\n    nome_restaurante = input('Digite o nome do restaurante para cadastro: ')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "listar_restaurantes",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def listar_restaurantes():\n    '''Essa função lista os restaurantes cadastrados'''\n    exibir_subtitulo('Listando restaurantes cadastrados')\n    for restaurante in restaurantes:\n        nome_restaurante = restaurante['nome']\n        categoria = restaurante['categoria']\n        ativo = 'Ativado' if restaurante['ativo'] else 'Desativado'\n        print(f'. {nome_restaurante.ljust(20)} | {categoria.ljust(20)} | {ativo}\\n')\n    voltar_menu_principal()\ndef alterar_estado_restaurante():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "alterar_estado_restaurante",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def alterar_estado_restaurante():\n    '''Função para alternar o estado de um restaurante'''\n    exibir_subtitulo('Alterando estado do restaurante\\n')\n    nome_restaurante = input('Digite o nome do restaurante para alterar o estado: ')\n    restaurante_encontrado = False\n    for restaurante in restaurantes:\n        if nome_restaurante == restaurante['nome']:\n            restaurante_encontrado = True\n            restaurante['ativo'] = not restaurante['ativo']\n            mensagem = f'O restaurante {nome_restaurante} foi ativado com sucesso' if restaurante['ativo'] else f'O restaurante {nome_restaurante} foi desativado com sucesso'",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "escolher_opcao",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def escolher_opcao():\n    try:\n        opcao_selecionada = int(input('\\nEscolha uma opção: '))\n        print(f'Você escolheu a opção {opcao_selecionada}')\n        match opcao_selecionada:\n            case 1:\n                cadastrar_novo_restaurante()\n            case 2:\n                listar_restaurantes()\n            case 3:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "finalizar_app",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def finalizar_app():\n    exibir_subtitulo('App finalizado!\\n')\ndef voltar_menu_principal():\n    input('\\nDigite uma tecla para voltar ao menu principal')\n    main()\ndef main():\n    exibir_nome_app()\n    exibir_opcoes()\n    escolher_opcao()\nif __name__ == '__main__':",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "voltar_menu_principal",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def voltar_menu_principal():\n    input('\\nDigite uma tecla para voltar ao menu principal')\n    main()\ndef main():\n    exibir_nome_app()\n    exibir_opcoes()\n    escolher_opcao()\nif __name__ == '__main__':\n    main()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def main():\n    exibir_nome_app()\n    exibir_opcoes()\n    escolher_opcao()\nif __name__ == '__main__':\n    main()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "restaurantes",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "restaurantes = [{'nome':'Pizza da Nona', 'categoria':'Pizzas', 'ativo': False}, \n                {'nome':'Shushi da Praça', 'categoria':'Japa', 'ativo': True},\n                {'nome':'Kilograma', 'categoria':'Kilo', 'ativo': True},\n]\ndef exibir_nome_app():\n    print(\"\"\"\n░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗\n██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝\n╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░\n░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "idade",
+        "kind": 5,
+        "importPath": "exerc_01",
+        "description": "exerc_01",
+        "peekOfCode": "idade = input(\"Informe sua idade: \")\nprint(f'Meu nome é {nome} e tenho {idade} anos') \"\"\"\nprint('''\nA\nL\nU\nR\nA\n''')\nprint('A','L','U','R','A',sep='\\n')",
+        "detail": "exerc_01",
+        "documentation": {}
+    },
+    {
+        "label": "pi",
+        "kind": 5,
+        "importPath": "exerc_01",
+        "description": "exerc_01",
+        "peekOfCode": "pi = 3.14159\n# Abordagem de f-string\nprint(f'\\nO valor arredondado de pi é: {pi:.2f}')\n# Abordagem de .format()\nprint('\\nO valor arredondado de pi é: {:.2f}'.format(pi))\n# Utilizando a função round()\nprint(f'\\nO valor arredondado de pi é: {round(pi, 2)}')\nlista_de_numeros = [1,2,3,4,5,6,7,8,9,10]\nfor numero in lista_de_numeros:\n    print(numero)",
+        "detail": "exerc_01",
+        "documentation": {}
+    },
+    {
+        "label": "lista_de_numeros",
+        "kind": 5,
+        "importPath": "exerc_01",
+        "description": "exerc_01",
+        "peekOfCode": "lista_de_numeros = [1,2,3,4,5,6,7,8,9,10]\nfor numero in lista_de_numeros:\n    print(numero)",
+        "detail": "exerc_01",
+        "documentation": {}
+    }
+]
