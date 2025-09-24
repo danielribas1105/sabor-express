@@ -9,6 +9,33 @@
         "documentation": {}
     },
     {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
         "label": "exibir_nome_app",
         "kind": 2,
         "importPath": "app",
@@ -117,6 +144,24 @@
         "documentation": {}
     },
     {
+        "label": "contar_vogais",
+        "kind": 2,
+        "importPath": "conta_vogais",
+        "description": "conta_vogais",
+        "peekOfCode": "def contar_vogais(texto):\n    vogais = \"aeiouáé\"\n    quantidade = 0\n    for letra in texto.lower():\n        if letra in vogais:\n            quantidade += 1\n    return quantidade\ntexto = input('Digite um texto: ')\nprint(f'O texto contém {contar_vogais(texto)} vogais')",
+        "detail": "conta_vogais",
+        "documentation": {}
+    },
+    {
+        "label": "texto",
+        "kind": 5,
+        "importPath": "conta_vogais",
+        "description": "conta_vogais",
+        "peekOfCode": "texto = input('Digite um texto: ')\nprint(f'O texto contém {contar_vogais(texto)} vogais')",
+        "detail": "conta_vogais",
+        "documentation": {}
+    },
+    {
         "label": "idade",
         "kind": 5,
         "importPath": "exerc_01",
@@ -141,6 +186,114 @@
         "description": "exerc_01",
         "peekOfCode": "lista_de_numeros = [1,2,3,4,5,6,7,8,9,10]\nfor numero in lista_de_numeros:\n    print(numero)",
         "detail": "exerc_01",
+        "documentation": {}
+    },
+    {
+        "label": "calcular_idade",
+        "kind": 2,
+        "importPath": "exerc_02",
+        "description": "exerc_02",
+        "peekOfCode": "def calcular_idade(ano_nascimento, ano_atual):\n    return ano_atual - ano_nascimento\nano_nascimento = input('Digite o ano de nascimento: ')\nano_atual = input('Digite o ano atual: ')\nprint(f'A idade é {calcular_idade(int(ano_nascimento), int(ano_atual))} anos.')",
+        "detail": "exerc_02",
+        "documentation": {}
+    },
+    {
+        "label": "ano_nascimento",
+        "kind": 5,
+        "importPath": "exerc_02",
+        "description": "exerc_02",
+        "peekOfCode": "ano_nascimento = input('Digite o ano de nascimento: ')\nano_atual = input('Digite o ano atual: ')\nprint(f'A idade é {calcular_idade(int(ano_nascimento), int(ano_atual))} anos.')",
+        "detail": "exerc_02",
+        "documentation": {}
+    },
+    {
+        "label": "ano_atual",
+        "kind": 5,
+        "importPath": "exerc_02",
+        "description": "exerc_02",
+        "peekOfCode": "ano_atual = input('Digite o ano atual: ')\nprint(f'A idade é {calcular_idade(int(ano_nascimento), int(ano_atual))} anos.')",
+        "detail": "exerc_02",
+        "documentation": {}
+    },
+    {
+        "label": "alunos",
+        "kind": 5,
+        "importPath": "exerc_03",
+        "description": "exerc_03",
+        "peekOfCode": "alunos = [\n    {\"nome\": \"Alice\", \"curso\": \"Python Avançado\"},\n    {\"nome\": \"Bruno\", \"curso\": \"Python Avançado\"},\n    {\"nome\": \"Carlos\", \"curso\": \"Java para Iniciantes\"},\n    {\"nome\": \"Daniela\", \"curso\": \"Machine Learning\"},\n    {\"nome\": \"Alice\", \"curso\": \"Python Avançado\"},\n]\nasync def inscrever_aluno(aluno):\n    curso_nome = aluno[\"curso\"]\n    nome_aluno = aluno[\"nome\"]",
+        "detail": "exerc_03",
+        "documentation": {}
+    },
+    {
+        "label": "VELOCIDADE_DOWNLOAD",
+        "kind": 5,
+        "importPath": "exerc_03",
+        "description": "exerc_03",
+        "peekOfCode": "VELOCIDADE_DOWNLOAD = 5 \nasync def baixar_arquivo(nome, tamanho):\n    print(f\"Iniciando download de {nome} (tamanho: {tamanho}MB)...\")\n    baixado = 0\n    segundos = 0\n    while baixado < tamanho:\n        await asyncio.sleep(1)  \n        baixado += VELOCIDADE_DOWNLOAD\n        baixado = min(baixado, tamanho)\n        segundos += 1",
+        "detail": "exerc_03",
+        "documentation": {}
+    },
+    {
+        "label": "jogos",
+        "kind": 5,
+        "importPath": "exerc_03",
+        "description": "exerc_03",
+        "peekOfCode": "jogos = [\n    {\"id\": 1, \"times\": (\"Flamengo\", \"Palmeiras\")},\n    {\"id\": 2, \"times\": (\"São Paulo\", \"Corinthians\")},\n    {\"id\": 3, \"times\": (\"Grêmio\", \"Internacional\")},\n]\nasync def processar_aposta(jogo, futuro):\n    tempo = random.randint(2, 8)\n    print(f\"Aposta no jogo {jogo['id']} ({jogo['times'][0]} vs {jogo['times'][1]}) registrada! Aguardando resultado...\\n\")\n    await asyncio.sleep(tempo)\n    resultado = random.choice([f\"Vitória do {jogo['times'][0]}\", f\"Vitória do {jogo['times'][1]}\", \"Empate\"])",
+        "detail": "exerc_03",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_senha",
+        "kind": 2,
+        "importPath": "gerador_senhas",
+        "description": "gerador_senhas",
+        "peekOfCode": "def gerar_senha():\n    maiusculas = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\n    minusculas = \"abcdefghijklmnopqrstuvwxyz\"\n    numeros = \"0123456789\"\n    especiais = \"!@#$%&*\"\n    senha = [\n        random.choice(maiusculas),\n        random.choice(minusculas),\n        random.choice(numeros),     \n        random.choice(especiais)    ",
+        "detail": "gerador_senhas",
+        "documentation": {}
+    },
+    {
+        "label": "valor_conta",
+        "kind": 5,
+        "importPath": "gorjeta",
+        "description": "gorjeta",
+        "peekOfCode": "valor_conta = float(input('Digite o valor da conta: '))\nporcentagem = float(input('Digite a porcentagem da gorjeta: '))\ngorjeta = valor_conta * (porcentagem/100)\nprint(f'Valor da gorjeta: R${gorjeta:.2f}')\nprint(f'Total a pagar: R${(valor_conta + gorjeta):.2f}')",
+        "detail": "gorjeta",
+        "documentation": {}
+    },
+    {
+        "label": "porcentagem",
+        "kind": 5,
+        "importPath": "gorjeta",
+        "description": "gorjeta",
+        "peekOfCode": "porcentagem = float(input('Digite a porcentagem da gorjeta: '))\ngorjeta = valor_conta * (porcentagem/100)\nprint(f'Valor da gorjeta: R${gorjeta:.2f}')\nprint(f'Total a pagar: R${(valor_conta + gorjeta):.2f}')",
+        "detail": "gorjeta",
+        "documentation": {}
+    },
+    {
+        "label": "gorjeta",
+        "kind": 5,
+        "importPath": "gorjeta",
+        "description": "gorjeta",
+        "peekOfCode": "gorjeta = valor_conta * (porcentagem/100)\nprint(f'Valor da gorjeta: R${gorjeta:.2f}')\nprint(f'Total a pagar: R${(valor_conta + gorjeta):.2f}')",
+        "detail": "gorjeta",
+        "documentation": {}
+    },
+    {
+        "label": "validar_cpf",
+        "kind": 2,
+        "importPath": "valida_cpf",
+        "description": "valida_cpf",
+        "peekOfCode": "def validar_cpf(cpf):\n    if not cpf.isdigit():\n        return \"Erro: O CPF deve conter apenas números.\"\n    if len(cpf) != 11:\n        return \"Erro: O CPF deve ter exatamente 11 dígitos.\"\n    return \"CPF válido\"\ncpf = input('Digite seu CPF: ')\nprint(validar_cpf(cpf))",
+        "detail": "valida_cpf",
+        "documentation": {}
+    },
+    {
+        "label": "cpf",
+        "kind": 5,
+        "importPath": "valida_cpf",
+        "description": "valida_cpf",
+        "peekOfCode": "cpf = input('Digite seu CPF: ')\nprint(validar_cpf(cpf))",
+        "detail": "valida_cpf",
         "documentation": {}
     }
 ]
