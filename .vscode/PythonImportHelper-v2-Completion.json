@@ -243,6 +243,15 @@
         "documentation": {}
     },
     {
+        "label": "gerar_senha",
+        "kind": 2,
+        "importPath": "gerador_senhas",
+        "description": "gerador_senhas",
+        "peekOfCode": "def gerar_senha():\n    maiusculas = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\n    minusculas = \"abcdefghijklmnopqrstuvwxyz\"\n    numeros = \"0123456789\"\n    especiais = \"!@#$%&*\"\n    senha = [\n        random.choice(maiusculas),\n        random.choice(minusculas),\n        random.choice(numeros),     \n        random.choice(especiais)    ",
+        "detail": "gerador_senhas",
+        "documentation": {}
+    },
+    {
         "label": "valor_conta",
         "kind": 5,
         "importPath": "gorjeta",
