@@ -36,6 +36,69 @@
         "documentation": {}
     },
     {
+        "label": "Restaurante",
+        "kind": 6,
+        "importPath": "oo-sabor-express.restaurante_old",
+        "description": "oo-sabor-express.restaurante_old",
+        "peekOfCode": "class Restaurante:\n\trestaurantes = []\n\tdef __init__(self, nome, categoria):\n\t\tself.nome = nome\n\t\tself.categoria = categoria\n\t\tself.ativo = False\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\treturn f'{self.nome} | {self.categoria}'\n\tdef listar_restaurantes():",
+        "detail": "oo-sabor-express.restaurante_old",
+        "documentation": {}
+    },
+    {
+        "label": "\trestaurantes",
+        "kind": 5,
+        "importPath": "oo-sabor-express.restaurante_old",
+        "description": "oo-sabor-express.restaurante_old",
+        "peekOfCode": "\trestaurantes = []\n\tdef __init__(self, nome, categoria):\n\t\tself.nome = nome\n\t\tself.categoria = categoria\n\t\tself.ativo = False\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\treturn f'{self.nome} | {self.categoria}'\n\tdef listar_restaurantes():\n\t\tfor restaurante in Restaurante.restaurantes:",
+        "detail": "oo-sabor-express.restaurante_old",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tself.nome",
+        "kind": 5,
+        "importPath": "oo-sabor-express.restaurante_old",
+        "description": "oo-sabor-express.restaurante_old",
+        "peekOfCode": "\t\tself.nome = nome\n\t\tself.categoria = categoria\n\t\tself.ativo = False\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\treturn f'{self.nome} | {self.categoria}'\n\tdef listar_restaurantes():\n\t\tfor restaurante in Restaurante.restaurantes:\n\t\t\tprint(f'{restaurante.nome} | {restaurante.categoria} | {restaurante.ativo}')\nrestaurante_massa = Restaurante('Praça', 'Gourmet')",
+        "detail": "oo-sabor-express.restaurante_old",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tself.categoria",
+        "kind": 5,
+        "importPath": "oo-sabor-express.restaurante_old",
+        "description": "oo-sabor-express.restaurante_old",
+        "peekOfCode": "\t\tself.categoria = categoria\n\t\tself.ativo = False\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\treturn f'{self.nome} | {self.categoria}'\n\tdef listar_restaurantes():\n\t\tfor restaurante in Restaurante.restaurantes:\n\t\t\tprint(f'{restaurante.nome} | {restaurante.categoria} | {restaurante.ativo}')\nrestaurante_massa = Restaurante('Praça', 'Gourmet')\nrestaurante_pizza = Restaurante('Pizza', 'Massas')",
+        "detail": "oo-sabor-express.restaurante_old",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tself.ativo",
+        "kind": 5,
+        "importPath": "oo-sabor-express.restaurante_old",
+        "description": "oo-sabor-express.restaurante_old",
+        "peekOfCode": "\t\tself.ativo = False\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\treturn f'{self.nome} | {self.categoria}'\n\tdef listar_restaurantes():\n\t\tfor restaurante in Restaurante.restaurantes:\n\t\t\tprint(f'{restaurante.nome} | {restaurante.categoria} | {restaurante.ativo}')\nrestaurante_massa = Restaurante('Praça', 'Gourmet')\nrestaurante_pizza = Restaurante('Pizza', 'Massas')\nRestaurante.listar_restaurantes()",
+        "detail": "oo-sabor-express.restaurante_old",
+        "documentation": {}
+    },
+    {
+        "label": "restaurante_massa",
+        "kind": 5,
+        "importPath": "oo-sabor-express.restaurante_old",
+        "description": "oo-sabor-express.restaurante_old",
+        "peekOfCode": "restaurante_massa = Restaurante('Praça', 'Gourmet')\nrestaurante_pizza = Restaurante('Pizza', 'Massas')\nRestaurante.listar_restaurantes()",
+        "detail": "oo-sabor-express.restaurante_old",
+        "documentation": {}
+    },
+    {
+        "label": "restaurante_pizza",
+        "kind": 5,
+        "importPath": "oo-sabor-express.restaurante_old",
+        "description": "oo-sabor-express.restaurante_old",
+        "peekOfCode": "restaurante_pizza = Restaurante('Pizza', 'Massas')\nRestaurante.listar_restaurantes()",
+        "detail": "oo-sabor-express.restaurante_old",
+        "documentation": {}
+    },
+    {
         "label": "exibir_nome_app",
         "kind": 2,
         "importPath": "app",
