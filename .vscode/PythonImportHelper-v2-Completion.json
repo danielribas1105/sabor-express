@@ -1,18 +1,92 @@
 [
     {
-        "label": "Avaliacao",
-        "importPath": "model.avaliacao",
-        "description": "model.avaliacao",
+        "label": "ItemCardapio",
+        "importPath": "models.cardapio.item_cardapio",
+        "description": "models.cardapio.item_cardapio",
         "isExtraImport": true,
-        "detail": "model.avaliacao",
+        "detail": "models.cardapio.item_cardapio",
+        "documentation": {}
+    },
+    {
+        "label": "ItemCardapio",
+        "importPath": "models.cardapio.item_cardapio",
+        "description": "models.cardapio.item_cardapio",
+        "isExtraImport": true,
+        "detail": "models.cardapio.item_cardapio",
+        "documentation": {}
+    },
+    {
+        "label": "ItemCardapio",
+        "importPath": "models.cardapio.item_cardapio",
+        "description": "models.cardapio.item_cardapio",
+        "isExtraImport": true,
+        "detail": "models.cardapio.item_cardapio",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "Avaliacao",
+        "importPath": "models.avaliacao",
+        "description": "models.avaliacao",
+        "isExtraImport": true,
+        "detail": "models.avaliacao",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
         "label": "Restaurante",
-        "importPath": "model.restaurante_old",
-        "description": "model.restaurante_old",
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
         "isExtraImport": true,
-        "detail": "model.restaurante_old",
+        "detail": "models.restaurante",
+        "documentation": {}
+    },
+    {
+        "label": "Prato",
+        "importPath": "models.cardapio.prato",
+        "description": "models.cardapio.prato",
+        "isExtraImport": true,
+        "detail": "models.cardapio.prato",
+        "documentation": {}
+    },
+    {
+        "label": "Bebida",
+        "importPath": "models.cardapio.bebida",
+        "description": "models.cardapio.bebida",
+        "isExtraImport": true,
+        "detail": "models.cardapio.bebida",
         "documentation": {}
     },
     {
@@ -25,93 +99,190 @@
         "documentation": {}
     },
     {
-        "label": "asyncio",
-        "kind": 6,
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "importPath": "asyncio",
-        "description": "asyncio",
-        "detail": "asyncio",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
-        "label": "math",
-        "kind": 6,
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "importPath": "math",
-        "description": "math",
-        "detail": "math",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
-        "label": "random",
+        "label": "Bebida",
         "kind": 6,
-        "isExtraImport": true,
-        "importPath": "random",
-        "description": "random",
-        "detail": "random",
+        "importPath": "models.cardapio.bebida",
+        "description": "models.cardapio.bebida",
+        "peekOfCode": "class Bebida(ItemCardapio):\n   def __init__(self, nome, preco, tamanho):\n      super().__init__(nome, preco)\n      self._tamanho = tamanho\n   def __str__(self):\n      return self._nome\n   def aplicar_desconto(self):\n      self._preco -= self._preco * 0.05",
+        "detail": "models.cardapio.bebida",
+        "documentation": {}
+    },
+    {
+        "label": "ItemCardapio",
+        "kind": 6,
+        "importPath": "models.cardapio.item_cardapio",
+        "description": "models.cardapio.item_cardapio",
+        "peekOfCode": "class ItemCardapio(ABC):\n   def __init__(self, nome, preco):\n      self._nome = nome\n      self._preco = preco\n   @abstractmethod\n   def aplicar_desconto(self):\n      pass",
+        "detail": "models.cardapio.item_cardapio",
+        "documentation": {}
+    },
+    {
+        "label": "Prato",
+        "kind": 6,
+        "importPath": "models.cardapio.prato",
+        "description": "models.cardapio.prato",
+        "peekOfCode": "class Prato(ItemCardapio):\n   def __init__(self, nome, preco, descricao):\n      super().__init__(nome, preco)\n      self._descricao = descricao\n   def __str__(self):\n      return self._nome\n   def aplicar_desconto(self):\n      self._preco -= self._preco * 0.08",
+        "detail": "models.cardapio.prato",
         "documentation": {}
     },
     {
         "label": "Avaliacao",
         "kind": 6,
-        "importPath": "model.avaliacao",
-        "description": "model.avaliacao",
+        "importPath": "models.avaliacao",
+        "description": "models.avaliacao",
         "peekOfCode": "class Avaliacao:\n    def __init__(self, cliente, nota):\n        self._cliente = cliente\n        self._nota = nota",
-        "detail": "model.avaliacao",
+        "detail": "models.avaliacao",
         "documentation": {}
     },
     {
         "label": "Restaurante",
         "kind": 6,
-        "importPath": "model.restaurante_old",
-        "description": "model.restaurante_old",
-        "peekOfCode": "class Restaurante:\n\trestaurantes = []\n\tdef __init__(self, nome, categoria):\n\t\tself._nome = nome.title()\n\t\tself._categoria = categoria.upper()\n\t\tself._ativo = False\n        self._avaliacao = []\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\treturn f'{self._nome} | {self._categoria}'",
-        "detail": "model.restaurante_old",
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "class Restaurante:\n\t\"\"\"Representa um restaurante e suas características.\"\"\"\n\trestaurantes = []\n\tdef __init__(self, nome, categoria):\n\t\t\"\"\"\n\t\tInicializa uma instância de Restaurante.\n      Parâmetros:\n      - nome (str): O nome do restaurante.\n      - categoria (str): A categoria do restaurante.\n      \"\"\"",
+        "detail": "models.restaurante",
         "documentation": {}
     },
     {
         "label": "\trestaurantes",
         "kind": 5,
-        "importPath": "model.restaurante_old",
-        "description": "model.restaurante_old",
-        "peekOfCode": "\trestaurantes = []\n\tdef __init__(self, nome, categoria):\n\t\tself._nome = nome.title()\n\t\tself._categoria = categoria.upper()\n\t\tself._ativo = False\n        self._avaliacao = []\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\treturn f'{self._nome} | {self._categoria}'\n\t@classmethod",
-        "detail": "model.restaurante_old",
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\trestaurantes = []\n\tdef __init__(self, nome, categoria):\n\t\t\"\"\"\n\t\tInicializa uma instância de Restaurante.\n      Parâmetros:\n      - nome (str): O nome do restaurante.\n      - categoria (str): A categoria do restaurante.\n      \"\"\"\n\t\tself._nome = nome.title()\n\t\tself._categoria = categoria.upper()",
+        "detail": "models.restaurante",
         "documentation": {}
     },
     {
         "label": "\t\tself._nome",
         "kind": 5,
-        "importPath": "model.restaurante_old",
-        "description": "model.restaurante_old",
-        "peekOfCode": "\t\tself._nome = nome.title()\n\t\tself._categoria = categoria.upper()\n\t\tself._ativo = False\n        self._avaliacao = []\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\treturn f'{self._nome} | {self._categoria}'\n\t@classmethod\n\tdef listar_restaurantes(cls):\n\t\tprint(f'{\"Restaurante\".ljust(25)} | {\"Categoria\".ljust(25)} | {\"Status\"}')",
-        "detail": "model.restaurante_old",
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\tself._nome = nome.title()\n\t\tself._categoria = categoria.upper()\n\t\tself._ativo = False\n\t\tself._avaliacao = []\n\t\tself._cardapio = []\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\t\"\"\"Retorna uma representação em string do restaurante.\"\"\"\n\t\treturn f'{self._nome} | {self._categoria}'\n\t@classmethod",
+        "detail": "models.restaurante",
         "documentation": {}
     },
     {
         "label": "\t\tself._categoria",
         "kind": 5,
-        "importPath": "model.restaurante_old",
-        "description": "model.restaurante_old",
-        "peekOfCode": "\t\tself._categoria = categoria.upper()\n\t\tself._ativo = False\n        self._avaliacao = []\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\treturn f'{self._nome} | {self._categoria}'\n\t@classmethod\n\tdef listar_restaurantes(cls):\n\t\tprint(f'{\"Restaurante\".ljust(25)} | {\"Categoria\".ljust(25)} | {\"Status\"}')\n\t\tfor restaurante in cls.restaurantes:",
-        "detail": "model.restaurante_old",
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\tself._categoria = categoria.upper()\n\t\tself._ativo = False\n\t\tself._avaliacao = []\n\t\tself._cardapio = []\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\t\"\"\"Retorna uma representação em string do restaurante.\"\"\"\n\t\treturn f'{self._nome} | {self._categoria}'\n\t@classmethod\n\tdef listar_restaurantes(cls):",
+        "detail": "models.restaurante",
         "documentation": {}
     },
     {
         "label": "\t\tself._ativo",
         "kind": 5,
-        "importPath": "model.restaurante_old",
-        "description": "model.restaurante_old",
-        "peekOfCode": "\t\tself._ativo = False\n        self._avaliacao = []\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\treturn f'{self._nome} | {self._categoria}'\n\t@classmethod\n\tdef listar_restaurantes(cls):\n\t\tprint(f'{\"Restaurante\".ljust(25)} | {\"Categoria\".ljust(25)} | {\"Status\"}')\n\t\tfor restaurante in cls.restaurantes:\n\t\t\tprint(f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {restaurante.ativo}')",
-        "detail": "model.restaurante_old",
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\tself._ativo = False\n\t\tself._avaliacao = []\n\t\tself._cardapio = []\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\t\"\"\"Retorna uma representação em string do restaurante.\"\"\"\n\t\treturn f'{self._nome} | {self._categoria}'\n\t@classmethod\n\tdef listar_restaurantes(cls):\n\t\t\"\"\"Exibe uma lista formatada de todos os restaurantes.\"\"\"",
+        "detail": "models.restaurante",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tself._avaliacao",
+        "kind": 5,
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\tself._avaliacao = []\n\t\tself._cardapio = []\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\t\"\"\"Retorna uma representação em string do restaurante.\"\"\"\n\t\treturn f'{self._nome} | {self._categoria}'\n\t@classmethod\n\tdef listar_restaurantes(cls):\n\t\t\"\"\"Exibe uma lista formatada de todos os restaurantes.\"\"\"\n\t\tprint(f'{\"Restaurante\".ljust(25)} | {\"Categoria\".ljust(25)} | {\"Avaliação\".ljust(25)} | {\"Status\"}')",
+        "detail": "models.restaurante",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tself._cardapio",
+        "kind": 5,
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\tself._cardapio = []\n\t\tRestaurante.restaurantes.append(self)\n\tdef __str__(self):\n\t\t\"\"\"Retorna uma representação em string do restaurante.\"\"\"\n\t\treturn f'{self._nome} | {self._categoria}'\n\t@classmethod\n\tdef listar_restaurantes(cls):\n\t\t\"\"\"Exibe uma lista formatada de todos os restaurantes.\"\"\"\n\t\tprint(f'{\"Restaurante\".ljust(25)} | {\"Categoria\".ljust(25)} | {\"Avaliação\".ljust(25)} | {\"Status\"}')\n\t\tfor restaurante in cls.restaurantes:",
+        "detail": "models.restaurante",
         "documentation": {}
     },
     {
         "label": "\t\tself._ativo",
         "kind": 5,
-        "importPath": "model.restaurante_old",
-        "description": "model.restaurante_old",
-        "peekOfCode": "\t\tself._ativo = not self._ativo\n    def receber_avaliacao(self, cliente, nota):\n        avaliacao = Avaliacao(cliente, nota)\n        self._avaliacao.append(avaliacao)",
-        "detail": "model.restaurante_old",
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\tself._ativo = not self._ativo\n\tdef receber_avaliacao(self, cliente, nota):\n\t\t\"\"\"\n      Registra uma avaliação para o restaurante.\n\t\tParâmetros:\n\t\t- cliente (str): O nome do cliente que fez a avaliação.\n\t\t- nota (float): A nota atribuída ao restaurante (entre 5 e 10).\n\t\t\"\"\"\n\t\tif nota < 5.0:\n\t\t\tnota = 5.0",
+        "detail": "models.restaurante",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tnota",
+        "kind": 5,
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\t\tnota = 5.0\n\t\tavaliacao = Avaliacao(cliente, nota)\n\t\tself._avaliacao.append(avaliacao)\n\t@property\n\tdef media_avaliacoes(self):\n\t\t\"\"\"Calcula e retorna a média das avaliações do restaurante.\"\"\"\n\t\tif not self._avaliacao:\n\t\t\treturn 'Sem avaliações'\n\t\tsoma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)\n\t\tquantidade_notas = len(self._avaliacao)",
+        "detail": "models.restaurante",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tavaliacao",
+        "kind": 5,
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\tavaliacao = Avaliacao(cliente, nota)\n\t\tself._avaliacao.append(avaliacao)\n\t@property\n\tdef media_avaliacoes(self):\n\t\t\"\"\"Calcula e retorna a média das avaliações do restaurante.\"\"\"\n\t\tif not self._avaliacao:\n\t\t\treturn 'Sem avaliações'\n\t\tsoma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)\n\t\tquantidade_notas = len(self._avaliacao)\n\t\tmedia = round(soma_das_notas / quantidade_notas, 1)",
+        "detail": "models.restaurante",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tsoma_das_notas",
+        "kind": 5,
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\tsoma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)\n\t\tquantidade_notas = len(self._avaliacao)\n\t\tmedia = round(soma_das_notas / quantidade_notas, 1)\n\t\treturn media\n\tdef adicionar_no_cardapio(self, item):\n\t\tif isinstance(item, ItemCardapio):\n\t\t\tself._cardapio.append(item)\n\t@property\n\tdef exibir_cardapio(self):\n\t\tprint(f'Cardapio do restaurante {self._nome}\\n')",
+        "detail": "models.restaurante",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tquantidade_notas",
+        "kind": 5,
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\tquantidade_notas = len(self._avaliacao)\n\t\tmedia = round(soma_das_notas / quantidade_notas, 1)\n\t\treturn media\n\tdef adicionar_no_cardapio(self, item):\n\t\tif isinstance(item, ItemCardapio):\n\t\t\tself._cardapio.append(item)\n\t@property\n\tdef exibir_cardapio(self):\n\t\tprint(f'Cardapio do restaurante {self._nome}\\n')\n\t\tfor i, item in enumerate(self._cardapio, start=1):",
+        "detail": "models.restaurante",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tmedia",
+        "kind": 5,
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\tmedia = round(soma_das_notas / quantidade_notas, 1)\n\t\treturn media\n\tdef adicionar_no_cardapio(self, item):\n\t\tif isinstance(item, ItemCardapio):\n\t\t\tself._cardapio.append(item)\n\t@property\n\tdef exibir_cardapio(self):\n\t\tprint(f'Cardapio do restaurante {self._nome}\\n')\n\t\tfor i, item in enumerate(self._cardapio, start=1):\n\t\t\tif hasattr(item, '_descricao'):",
+        "detail": "models.restaurante",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tmensagem_prato",
+        "kind": 5,
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\t\t\tmensagem_prato = f'{i}. Nome: {item._nome} | Preço: R$ {item._preco} | Descrição: {item._descricao}'\n\t\t\t\tprint(mensagem_prato)\n\t\t\telse:\n\t\t\t\tmensagem_bebida = f'{i}. Nome: {item._nome} | Preço: R$ {item._preco} | Tamanho: {item._tamanho}'\n\t\t\t\tprint(mensagem_bebida)",
+        "detail": "models.restaurante",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tmensagem_bebida",
+        "kind": 5,
+        "importPath": "models.restaurante",
+        "description": "models.restaurante",
+        "peekOfCode": "\t\t\t\tmensagem_bebida = f'{i}. Nome: {item._nome} | Preço: R$ {item._preco} | Tamanho: {item._tamanho}'\n\t\t\t\tprint(mensagem_bebida)",
+        "detail": "models.restaurante",
         "documentation": {}
     },
     {
@@ -119,34 +290,43 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def main():\n    pass\nif __name__ == '__main__':\n    main()",
+        "peekOfCode": "def main():\n    restaurante_massa.exibir_cardapio\nif __name__ == '__main__':\n    main() \"\"\"",
         "detail": "app",
         "documentation": {}
     },
     {
-        "label": "restaurante_massa",
+        "label": "url",
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "restaurante_massa = Restaurante('praça', 'Gourmet')\nrestaurante_massa.receber_avaliacao('Gui', 9.5)\nrestaurante_pizza = Restaurante('pizza', 'Massas')\nrestaurante_sushi = Restaurante('Japa', 'Japones')\nRestaurante.listar_restaurantes()\ndef main():\n    pass\nif __name__ == '__main__':\n    main()",
+        "peekOfCode": "url = 'https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json'\nresponse = requests.get(url)\nprint(response)\nif response.status_code == 200:\n    dados_json = response.json()\n    dados_restaurante = {}\n    for item in dados_json:\n        nome_restaurante = item['Company']\n        if nome_restaurante not in dados_restaurante:\n            dados_restaurante[nome_restaurante] = []",
         "detail": "app",
         "documentation": {}
     },
     {
-        "label": "restaurante_pizza",
+        "label": "response",
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "restaurante_pizza = Restaurante('pizza', 'Massas')\nrestaurante_sushi = Restaurante('Japa', 'Japones')\nRestaurante.listar_restaurantes()\ndef main():\n    pass\nif __name__ == '__main__':\n    main()",
+        "peekOfCode": "response = requests.get(url)\nprint(response)\nif response.status_code == 200:\n    dados_json = response.json()\n    dados_restaurante = {}\n    for item in dados_json:\n        nome_restaurante = item['Company']\n        if nome_restaurante not in dados_restaurante:\n            dados_restaurante[nome_restaurante] = []\n        dados_restaurante[nome_restaurante].append({",
         "detail": "app",
         "documentation": {}
     },
     {
-        "label": "restaurante_sushi",
+        "label": "bebida_suco",
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "restaurante_sushi = Restaurante('Japa', 'Japones')\nRestaurante.listar_restaurantes()\ndef main():\n    pass\nif __name__ == '__main__':\n    main()",
+        "peekOfCode": "bebida_suco = Bebida('Suco de Melancia', 5.0, 'G')\nbebida_suco.aplicar_desconto()\nprato_pao = Prato('Pão', 1.0, 'Pãozinho da casa')\nprato_pao.aplicar_desconto()\nrestaurante_massa.adicionar_no_cardapio(bebida_suco)\nrestaurante_massa.adicionar_no_cardapio(prato_pao)\nRestaurante.listar_restaurantes()\ndef main():\n    restaurante_massa.exibir_cardapio\nif __name__ == '__main__':",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "prato_pao",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "prato_pao = Prato('Pão', 1.0, 'Pãozinho da casa')\nprato_pao.aplicar_desconto()\nrestaurante_massa.adicionar_no_cardapio(bebida_suco)\nrestaurante_massa.adicionar_no_cardapio(prato_pao)\nRestaurante.listar_restaurantes()\ndef main():\n    restaurante_massa.exibir_cardapio\nif __name__ == '__main__':\n    main() \"\"\"",
         "detail": "app",
         "documentation": {}
     },
@@ -259,156 +439,30 @@
         "documentation": {}
     },
     {
-        "label": "contar_vogais",
+        "label": "hello_world",
         "kind": 2,
-        "importPath": "conta_vogais",
-        "description": "conta_vogais",
-        "peekOfCode": "def contar_vogais(texto):\n    vogais = \"aeiouáé\"\n    quantidade = 0\n    for letra in texto.lower():\n        if letra in vogais:\n            quantidade += 1\n    return quantidade\ntexto = input('Digite um texto: ')\nprint(f'O texto contém {contar_vogais(texto)} vogais')",
-        "detail": "conta_vogais",
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def hello_world():\n    \"\"\"Endpoint que exibe uma mensagem incrível do mundo da programação!\"\"\"\n    return {\"Hello\": \"World\"}\n@app.get(\"/api/restaurantes/\")\ndef get_restaurantes(restaurante: str = Query(None)):\n    \"\"\"Endpoint para ver os cardápios dos restaurantes\"\"\"\n    url = \"https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json\"\n    response = requests.get(url)\n    if response.status_code == 200:\n        dados_json = response.json()",
+        "detail": "main",
         "documentation": {}
     },
     {
-        "label": "texto",
-        "kind": 5,
-        "importPath": "conta_vogais",
-        "description": "conta_vogais",
-        "peekOfCode": "texto = input('Digite um texto: ')\nprint(f'O texto contém {contar_vogais(texto)} vogais')",
-        "detail": "conta_vogais",
-        "documentation": {}
-    },
-    {
-        "label": "idade",
-        "kind": 5,
-        "importPath": "exerc_01",
-        "description": "exerc_01",
-        "peekOfCode": "idade = input(\"Informe sua idade: \")\nprint(f'Meu nome é {nome} e tenho {idade} anos') \"\"\"\nprint('''\nA\nL\nU\nR\nA\n''')\nprint('A','L','U','R','A',sep='\\n')",
-        "detail": "exerc_01",
-        "documentation": {}
-    },
-    {
-        "label": "pi",
-        "kind": 5,
-        "importPath": "exerc_01",
-        "description": "exerc_01",
-        "peekOfCode": "pi = 3.14159\n# Abordagem de f-string\nprint(f'\\nO valor arredondado de pi é: {pi:.2f}')\n# Abordagem de .format()\nprint('\\nO valor arredondado de pi é: {:.2f}'.format(pi))\n# Utilizando a função round()\nprint(f'\\nO valor arredondado de pi é: {round(pi, 2)}')\nlista_de_numeros = [1,2,3,4,5,6,7,8,9,10]\nfor numero in lista_de_numeros:\n    print(numero)",
-        "detail": "exerc_01",
-        "documentation": {}
-    },
-    {
-        "label": "lista_de_numeros",
-        "kind": 5,
-        "importPath": "exerc_01",
-        "description": "exerc_01",
-        "peekOfCode": "lista_de_numeros = [1,2,3,4,5,6,7,8,9,10]\nfor numero in lista_de_numeros:\n    print(numero)",
-        "detail": "exerc_01",
-        "documentation": {}
-    },
-    {
-        "label": "calcular_idade",
+        "label": "get_restaurantes",
         "kind": 2,
-        "importPath": "exerc_02",
-        "description": "exerc_02",
-        "peekOfCode": "def calcular_idade(ano_nascimento, ano_atual):\n    return ano_atual - ano_nascimento\nano_nascimento = input('Digite o ano de nascimento: ')\nano_atual = input('Digite o ano atual: ')\nprint(f'A idade é {calcular_idade(int(ano_nascimento), int(ano_atual))} anos.')",
-        "detail": "exerc_02",
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_restaurantes(restaurante: str = Query(None)):\n    \"\"\"Endpoint para ver os cardápios dos restaurantes\"\"\"\n    url = \"https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json\"\n    response = requests.get(url)\n    if response.status_code == 200:\n        dados_json = response.json()\n        if restaurante is None:\n            return {\"Dados:\": dados_json}\n        dados_restaurante = []\n        for item in dados_json:",
+        "detail": "main",
         "documentation": {}
     },
     {
-        "label": "ano_nascimento",
+        "label": "app",
         "kind": 5,
-        "importPath": "exerc_02",
-        "description": "exerc_02",
-        "peekOfCode": "ano_nascimento = input('Digite o ano de nascimento: ')\nano_atual = input('Digite o ano atual: ')\nprint(f'A idade é {calcular_idade(int(ano_nascimento), int(ano_atual))} anos.')",
-        "detail": "exerc_02",
-        "documentation": {}
-    },
-    {
-        "label": "ano_atual",
-        "kind": 5,
-        "importPath": "exerc_02",
-        "description": "exerc_02",
-        "peekOfCode": "ano_atual = input('Digite o ano atual: ')\nprint(f'A idade é {calcular_idade(int(ano_nascimento), int(ano_atual))} anos.')",
-        "detail": "exerc_02",
-        "documentation": {}
-    },
-    {
-        "label": "alunos",
-        "kind": 5,
-        "importPath": "exerc_03",
-        "description": "exerc_03",
-        "peekOfCode": "alunos = [\n    {\"nome\": \"Alice\", \"curso\": \"Python Avançado\"},\n    {\"nome\": \"Bruno\", \"curso\": \"Python Avançado\"},\n    {\"nome\": \"Carlos\", \"curso\": \"Java para Iniciantes\"},\n    {\"nome\": \"Daniela\", \"curso\": \"Machine Learning\"},\n    {\"nome\": \"Alice\", \"curso\": \"Python Avançado\"},\n]\nasync def inscrever_aluno(aluno):\n    curso_nome = aluno[\"curso\"]\n    nome_aluno = aluno[\"nome\"]",
-        "detail": "exerc_03",
-        "documentation": {}
-    },
-    {
-        "label": "VELOCIDADE_DOWNLOAD",
-        "kind": 5,
-        "importPath": "exerc_03",
-        "description": "exerc_03",
-        "peekOfCode": "VELOCIDADE_DOWNLOAD = 5 \nasync def baixar_arquivo(nome, tamanho):\n    print(f\"Iniciando download de {nome} (tamanho: {tamanho}MB)...\")\n    baixado = 0\n    segundos = 0\n    while baixado < tamanho:\n        await asyncio.sleep(1)  \n        baixado += VELOCIDADE_DOWNLOAD\n        baixado = min(baixado, tamanho)\n        segundos += 1",
-        "detail": "exerc_03",
-        "documentation": {}
-    },
-    {
-        "label": "jogos",
-        "kind": 5,
-        "importPath": "exerc_03",
-        "description": "exerc_03",
-        "peekOfCode": "jogos = [\n    {\"id\": 1, \"times\": (\"Flamengo\", \"Palmeiras\")},\n    {\"id\": 2, \"times\": (\"São Paulo\", \"Corinthians\")},\n    {\"id\": 3, \"times\": (\"Grêmio\", \"Internacional\")},\n]\nasync def processar_aposta(jogo, futuro):\n    tempo = random.randint(2, 8)\n    print(f\"Aposta no jogo {jogo['id']} ({jogo['times'][0]} vs {jogo['times'][1]}) registrada! Aguardando resultado...\\n\")\n    await asyncio.sleep(tempo)\n    resultado = random.choice([f\"Vitória do {jogo['times'][0]}\", f\"Vitória do {jogo['times'][1]}\", \"Empate\"])",
-        "detail": "exerc_03",
-        "documentation": {}
-    },
-    {
-        "label": "gerar_senha",
-        "kind": 2,
-        "importPath": "gerador_senhas",
-        "description": "gerador_senhas",
-        "peekOfCode": "def gerar_senha():\n    maiusculas = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\n    minusculas = \"abcdefghijklmnopqrstuvwxyz\"\n    numeros = \"0123456789\"\n    especiais = \"!@#$%&*\"\n    senha = [\n        random.choice(maiusculas),\n        random.choice(minusculas),\n        random.choice(numeros),     \n        random.choice(especiais)    ",
-        "detail": "gerador_senhas",
-        "documentation": {}
-    },
-    {
-        "label": "valor_conta",
-        "kind": 5,
-        "importPath": "gorjeta",
-        "description": "gorjeta",
-        "peekOfCode": "valor_conta = float(input('Digite o valor da conta: '))\nporcentagem = float(input('Digite a porcentagem da gorjeta: '))\ngorjeta = valor_conta * (porcentagem/100)\nprint(f'Valor da gorjeta: R${gorjeta:.2f}')\nprint(f'Total a pagar: R${(valor_conta + gorjeta):.2f}')",
-        "detail": "gorjeta",
-        "documentation": {}
-    },
-    {
-        "label": "porcentagem",
-        "kind": 5,
-        "importPath": "gorjeta",
-        "description": "gorjeta",
-        "peekOfCode": "porcentagem = float(input('Digite a porcentagem da gorjeta: '))\ngorjeta = valor_conta * (porcentagem/100)\nprint(f'Valor da gorjeta: R${gorjeta:.2f}')\nprint(f'Total a pagar: R${(valor_conta + gorjeta):.2f}')",
-        "detail": "gorjeta",
-        "documentation": {}
-    },
-    {
-        "label": "gorjeta",
-        "kind": 5,
-        "importPath": "gorjeta",
-        "description": "gorjeta",
-        "peekOfCode": "gorjeta = valor_conta * (porcentagem/100)\nprint(f'Valor da gorjeta: R${gorjeta:.2f}')\nprint(f'Total a pagar: R${(valor_conta + gorjeta):.2f}')",
-        "detail": "gorjeta",
-        "documentation": {}
-    },
-    {
-        "label": "validar_cpf",
-        "kind": 2,
-        "importPath": "valida_cpf",
-        "description": "valida_cpf",
-        "peekOfCode": "def validar_cpf(cpf):\n    if not cpf.isdigit():\n        return \"Erro: O CPF deve conter apenas números.\"\n    if len(cpf) != 11:\n        return \"Erro: O CPF deve ter exatamente 11 dígitos.\"\n    return \"CPF válido\"\ncpf = input('Digite seu CPF: ')\nprint(validar_cpf(cpf))",
-        "detail": "valida_cpf",
-        "documentation": {}
-    },
-    {
-        "label": "cpf",
-        "kind": 5,
-        "importPath": "valida_cpf",
-        "description": "valida_cpf",
-        "peekOfCode": "cpf = input('Digite seu CPF: ')\nprint(validar_cpf(cpf))",
-        "detail": "valida_cpf",
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/api/hello\")\ndef hello_world():\n    \"\"\"Endpoint que exibe uma mensagem incrível do mundo da programação!\"\"\"\n    return {\"Hello\": \"World\"}\n@app.get(\"/api/restaurantes/\")\ndef get_restaurantes(restaurante: str = Query(None)):\n    \"\"\"Endpoint para ver os cardápios dos restaurantes\"\"\"\n    url = \"https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json\"\n    response = requests.get(url)",
+        "detail": "main",
         "documentation": {}
     }
 ]
