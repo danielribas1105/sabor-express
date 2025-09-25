@@ -35,3 +35,18 @@ pip freeze
 ## Criar o requirements.txt a partir do pip freeze
 
 pip freeze > requirements.txt
+
+## Instalar as dependências
+
+pip install fastapi
+pip install unicorn
+pip freeze > requirements.txt <!-- atualiza o requirements.txt -->
+
+## Para desistalar um pacote
+
+pip uninstall 'nome_do_pacote'
+
+
+## Para rodar a aplicação
+
+uvicorn main:app --reload
