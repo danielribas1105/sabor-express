@@ -27,3 +27,11 @@ pip install -r requirements.txt
 ## ▶️ Rodando o servidor
 
 uvicorn app.main:app --reload
+
+## Verificar pacotes instalados
+
+pip freeze
+
+## Criar o requirements.txt a partir do pip freeze
+
+pip freeze > requirements.txt
