@@ -1,6 +1,10 @@
-from model.restaurante import Restaurante
+from models.restaurante import Restaurante
+from models.cardapio.prato import Prato
+from models.cardapio.bebida import Bebida
 
 restaurante_massa = Restaurante('praça', 'Gourmet')
+bebida_suco = Bebida('Suco de Melancia', 5.0, 'G')
+prato_pao = Prato('Pão', 1.0, 'Pãozinho da casa')
 restaurante_massa.receber_avaliacao('Gui', 9.5)
 restaurante_massa.receber_avaliacao('Lais', 8.0)
 restaurante_massa.receber_avaliacao('João', 5.0)

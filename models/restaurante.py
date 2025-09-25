@@ -1,4 +1,4 @@
-from model.avaliacao import Avaliacao
+from models.avaliacao import Avaliacao
 
 class Restaurante:
 	"""Representa um restaurante e suas características."""
