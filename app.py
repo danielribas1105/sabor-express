@@ -2,7 +2,12 @@ from model.restaurante import Restaurante
 
 restaurante_massa = Restaurante('praça', 'Gourmet')
 restaurante_massa.receber_avaliacao('Gui', 9.5)
+restaurante_massa.receber_avaliacao('Lais', 8.0)
+restaurante_massa.receber_avaliacao('João', 5.0)
 restaurante_pizza = Restaurante('pizza', 'Massas')
+restaurante_pizza.receber_avaliacao('Gui', 3.5)
+restaurante_pizza.receber_avaliacao('Lais', 4.0)
+restaurante_pizza.receber_avaliacao('João', 2.0)
 restaurante_sushi = Restaurante('Japa', 'Japones')
 
 Restaurante.listar_restaurantes()
