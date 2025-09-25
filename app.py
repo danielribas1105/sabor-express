@@ -2,22 +2,18 @@ from models.restaurante import Restaurante
 from models.cardapio.prato import Prato
 from models.cardapio.bebida import Bebida
 
-restaurante_massa = Restaurante('praça', 'Gourmet')
+restaurante_massa = Restaurante('Massa da Nona', 'Massas e pizzas')
 bebida_suco = Bebida('Suco de Melancia', 5.0, 'G')
+bebida_suco.aplicar_desconto()
 prato_pao = Prato('Pão', 1.0, 'Pãozinho da casa')
-restaurante_massa.receber_avaliacao('Gui', 9.5)
-restaurante_massa.receber_avaliacao('Lais', 8.0)
-restaurante_massa.receber_avaliacao('João', 5.0)
-restaurante_pizza = Restaurante('pizza', 'Massas')
-restaurante_pizza.receber_avaliacao('Gui', 3.5)
-restaurante_pizza.receber_avaliacao('Lais', 4.0)
-restaurante_pizza.receber_avaliacao('João', 2.0)
-restaurante_sushi = Restaurante('Japa', 'Japones')
+prato_pao.aplicar_desconto()
+restaurante_massa.adicionar_no_cardapio(bebida_suco)
+restaurante_massa.adicionar_no_cardapio(prato_pao)
 
 Restaurante.listar_restaurantes()
 
 def main():
-    pass
+    restaurante_massa.exibir_cardapio
 
 if __name__ == '__main__':
     main()
